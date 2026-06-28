@@ -204,7 +204,7 @@ a {
 .select-content-center {
   text-align: left;
   max-width: 600px;
-  margin-top: -50px;
+  margin-top: -120px; /* Desloca o logotipo e título mais para cima */
 }
 
 .logo-main {
