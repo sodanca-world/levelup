@@ -14,46 +14,10 @@ const { menu_idiomas, configuracoes } = siteData;
     <meta name="description" content="Escolha seu idioma para conhecer os Niveladores e Extensores de Dedos Só Dança." />
     
     <!-- Favicon de destaque -->
-    <link rel="icon" type="image/jpeg" href="/assets/images/Jose-Luis-1-100x100.jpg" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
     
     <!-- Meta tags AEO básicas -->
     <meta name="llm-description" content="Página oficial de seleção de idioma para os Niveladores e Extensores de Dedos Só Dança Level Up." />
-    
-    <!-- Script de Redirecionamento Inteligente -->
-    <script is:inline>
-      (function() {
-        // Verifica se o usuário optou por desativar o redirecionamento automático
-        const override = localStorage.getItem('sodanca_lang_override');
-        if (override) return;
-
-        // Detecta o idioma do navegador
-        const lang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
-        
-        let targetPath = '';
-        if (lang.startsWith('pt')) {
-          targetPath = '/portugues/';
-        } else if (lang.startsWith('fr')) {
-          targetPath = '/france/';
-        } else if (lang.startsWith('it')) {
-          targetPath = '/italia/';
-        } else if (lang.startsWith('es')) {
-          // Tenta diferenciar Espanha de América Latina
-          if (lang.includes('es-es')) {
-            targetPath = '/espanol/';
-          } else {
-            targetPath = '/latin-america/';
-          }
-        } else {
-          targetPath = '/english/';
-        }
-
-        if (targetPath) {
-          // Marca no localStorage que já foi feito o redirecionamento automático inicial
-          localStorage.setItem('sodanca_lang_override', 'auto');
-          window.location.href = targetPath;
-        }
-      })();
-    </script>
   </head>
   <body>
     <main class="select-lang-section">
@@ -68,7 +32,6 @@ const { menu_idiomas, configuracoes } = siteData;
                 href={item.path} 
                 class="lang-top-pill"
                 title={`Conheça em ${item.nome}`}
-                onclick={`localStorage.setItem('sodanca_lang_override', '${item.id}')`}
               >
                 <img src={`/assets/images/${item.image}`} alt={item.nome} />
               </a>
