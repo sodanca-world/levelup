@@ -275,7 +275,7 @@ a {
 /* Responsividade Mobile da Home */
 @media (max-width: 900px) {
   .select-lang-section {
-    background-image: url('/assets/images/embalagem-celular.jpg');
+    background-image: url('/assets/images/embalagem.jpg');
     height: auto;
     min-height: 100vh;
     padding: 40px 0;
