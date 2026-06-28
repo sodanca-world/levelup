@@ -1,0 +1,487 @@
+{
+  "configuracoes": {
+    "empresa_nome": "Só Dança",
+    "empresa_logo_imagem": "Logo.png",
+    "empresa_email": "contato@sodanca.com.br",
+    "empresa_site_base": "https://levelup.sodanca.world",
+    "formspree_id": "xzbkbkge"
+  },
+  "menu_idiomas": [
+    {
+      "id": "portugues",
+      "nome": "Portugal",
+      "flag": "🇵🇹",
+      "image": "portugal2.png",
+      "path": "/portugues/"
+    },
+    {
+      "id": "english",
+      "nome": "English",
+      "flag": "🇬🇧",
+      "image": "english2.png",
+      "path": "/english/"
+    },
+    {
+      "id": "espanol",
+      "nome": "España",
+      "flag": "🇪🇸",
+      "image": "espana2.png",
+      "path": "/espanol/"
+    },
+    {
+      "id": "france",
+      "nome": "France",
+      "flag": "🇫🇷",
+      "image": "france2.png",
+      "path": "/france/"
+    },
+    {
+      "id": "italia",
+      "nome": "Italia",
+      "flag": "🇮🇹",
+      "image": "italia2.png",
+      "path": "/italia/"
+    },
+    {
+      "id": "latin-america",
+      "nome": "Latin America",
+      "flag": "🌎",
+      "image": "latin-america2.png",
+      "path": "/latin-america/"
+    }
+  ],
+  "idiomas": {
+    "portugues": {
+      "seo": {
+        "titulo": "Portugues - Sodanca World",
+        "descricao": "Para minimizar as diferenças entre os dedos e facilitar o ajuste e o desempenho na dança, a Só Dança desenvolveu os Niveladores e Extensores de Dedos para que t",
+        "regiao": "PT-11",
+        "cidade": "Lisboa",
+        "coordenadas": "38.722252;-9.139337",
+        "llm_descricao": "Página explicativa sobre Niveladores e Extensores de Dedos da Só Dança em portugues. Desenvolvido pelo Dr. José Luiz Melo."
+      },
+      "hero": {
+        "titulo_secao": "LEVEL UP",
+        "subtitulo_secao": "Niveladores de Dedos",
+        "descricao": "Para minimizar as diferenças entre os dedos e facilitar o ajuste e o desempenho na dança, a Só Dança desenvolveu os Niveladores e Extensores de Dedos para que todos os tipos de pés se encaixem confortavelmente nas sapatilhas.Os Niveladores protegem seus dedos onde eles mais precisam, adaptando seus pés a todos os modelos de sapatilha de ponta Só Dança."
+      },
+      "por_que_usar": {
+        "titulo": "POR QUE USAR OS NIVELADORES DE DEDOS SÓ DANÇA?",
+        "texto": "Dr. José Luiz Bastos Melo: “O uso correto dos Niveladores favorece o amortecimento de impacto e o alinhamento do eixo dos pés quando você está na ponta, colaborando para a saúde de seus pés, ajudando a evitar a formação de calos, escoriações e possíveis deformações.” Na Figura 1 nem todos os dedos tocam o fundo da sapatilha, mas na Figura 2 eles estão nivelados, assim o apoio ­fica homogêneo e o peso do corpo se distribui uniformemente sobre todos os dedos, diminuindo a pressão sobre o dedo maior. Isso faz toda a diferença para a bailarina, porque os Niveladores favorecem o amortecimento de impacto e o alinhamento do eixo dos pés quando na ponta, colaborando para a saúde dos pés e ajudando a evitar a formação de calos, escoriações e possíveis deformações."
+      },
+      "todos_dedos": {
+        "titulo": "Niveladores para todos os dedos",
+        "texto": "São 5 tamanhos, um para cada dedo do pé. Cada Nivelador é acompanhado de um Extensor, que pode ser inserido no interior do Nivelador para aumentar o comprimento do dedo. Cada embalagem contém dez Niveladores e dez Extensores."
+      },
+      "dr_jose": {
+        "titulo": "Dr. José Luiz de Bastos Melo, fisioterapeuta com especialidade na prevenção e tratamento de lesões decorrentes da dança",
+        "texto": "Dr. José Luiz de Bastos Melo, fisioterapeuta com especialidade na prevenção e tratamento de lesões decorrentes da dança, palestrante e consultor no desenvolvimento de produtos Só Dança.Responsável pelo desenvolvimento dos Niveladores e Extensores de Dedos da Só Dança, o Dr. José Luiz trabalhou com bailarinos e profissionais da dança para entender suas reais necessidades e encontrar formas de atenuar problemas que são aparentemente simples, mas que criam muitas dificuldades para os bailarinos e professores, principalmente no uso das sapatilhas de ponta.Dedos curtos, dificuldade de passar pela meia-ponta... Primeiro ou segundo dedo muito longo, dificuldade de equilíbrio nas pontas... Lesões e tantas outras coisas que atrapalham o desempenho de bailarinas tanto de nível intermediário e profissional quanto de iniciante são amenizadas com o uso dos Niveladores e Extensores de Dedos da Só Dança.As bailarinas indicam suas necessidades e a Só Dança cria produtos que as atende de forma simples e eficiente."
+      },
+      "dicas": {
+        "introducao": "Na dança, o trabalho de ponta é um trabalho árduo e longo e é sempre importante que a bailarina busque o melhor ajuste da sapatilha a seus pés. Nós temos aqui algumas bailarinas e nós vamos ver os tipos de pés que elas têm e como usar os niveladores de dedos.",
+        "videos": [
+          {
+            "id": "366539673",
+            "titulo": "Pés com o segundo dedo maior"
+          },
+          {
+            "id": "366539884",
+            "titulo": "Como Ajustar dedos curtos ao tamanho da gáspea"
+          },
+          {
+            "id": "366540088",
+            "titulo": "Pés com o primeiro dedo maior"
+          },
+          {
+            "id": "367271567",
+            "titulo": "Como distribuir a pressão sobre os dedos"
+          },
+          {
+            "id": "369575960",
+            "titulo": "Dança é precisão... e a Só Dança está ao seu lado"
+          }
+        ]
+      },
+      "conservacao": {
+        "adapt_titulo": "Adaptação ao tamanho dos dedos",
+        "adapt_texto": "A natureza elástica dos Niveladores permite sua adaptação a todos os tamanhos de dedos. Se seus dedos são muito curtos e fi­nos, use o Nivelador indicado para dedos menores.",
+        "cons_title": "Conservação dos niveladores",
+        "cons_texto": "Conserve-os longe de materiais perfurantes e passe talco para guardá-los após cada uso, mantendo, assim, a elasticidade e o toque macio."
+      },
+      "final": {
+        "texto": "Dança é precisão... é o que todo bailarino busca com total dedicação nos incansáveis ensaios e na concentração.A dança é inerente aos bailarinos assim como ao DNA da Só Dança na sua constante busca da evolução, de proporcionar maior conforto, segurança e saúde para quem dança.Todos os movimentos e expressões do corpo na dança exigem muito dos pés, que sofrem, independentemente de tamanho, forma ou terminações dos dedos, que é a principal diferença apresentada pelos pés."
+      },
+      "labels": {
+        "newsletter_titulo": "Newsletter",
+        "newsletter_btn": "Enviar",
+        "newsletter_placeholder": "Email",
+        "contato_titulo": "Contato",
+        "nome": "Nome",
+        "email": "Email",
+        "assunto": "Assunto",
+        "mensagem": "Mensagem",
+        "enviar": "Enviar"
+      }
+    },
+    "english": {
+      "seo": {
+        "titulo": "English - Sodanca World",
+        "descricao": "With the purpose to reduce the differences as well as to facilitate both: the pointe shoes adjustment and the dance performance, Só Dança has created Levelers a",
+        "regiao": "US-NY",
+        "cidade": "New York",
+        "coordenadas": "40.712776;-74.005974",
+        "llm_descricao": "Página explicativa sobre Niveladores e Extensores de Dedos da Só Dança em english. Desenvolvido pelo Dr. José Luiz Melo."
+      },
+      "hero": {
+        "titulo_secao": "LEVEL UP",
+        "subtitulo_secao": "Niveladores de Dedos",
+        "descricao": "With the purpose to reduce the differences as well as to facilitate both: the pointe shoes adjustment and the dance performance, Só Dança has created Levelers and Extenders, so all types of feet can fit snugly into the pointe shoes.The Levelers protect your toes where they need more. They also adjust your feet to fit in all the Só Dança pointe shoes."
+      },
+      "por_que_usar": {
+        "titulo": "WHY TO USE THE SÓ DANÇA TOES LEVELERS?",
+        "texto": "Physiotherapist José Luiz Bastos Melo: “The proper use of the Levelers favors impact cushioning and feet alignment when you are on pointes helping to keep your feet healthy, helping to prevent calluses, abrasions and possible deformation.”At the Picture 1 not all the toes touch the pointe shoe bottom, but in Picture 2 they are leveled, as so the support is homogeneous and the body weight is evenly distributed over all the toes, reducing the pressure on the larger toe.This makes all the difference to the dancer, because the Levelers favor impact cushioning and alignment of the feet when on pointe helping to improve the health of the feet and helping to prevent callus formation, abrasions and possible deformation."
+      },
+      "todos_dedos": {
+        "titulo": "A leveler for each toe",
+        "texto": "There are five sizes of Levelers, one for each toe. Each Leveler comes with an Extender that you can insert into the Leveler to increase toe length. Each pack contains 10 Levelers and 10 Extenders."
+      },
+      "dr_jose": {
+        "titulo": "Dr. José Luiz de Bastos Melo, fisioterapeuta com especialidade na prevenção e tratamento de lesões decorrentes da dança",
+        "texto": "José Luiz de Bastos Melo, physiotherapist with specialization in prevention and treatment of injuries that came from dance, professor, and consultant for the creation of Só Dança products."
+      },
+      "dicas": {
+        "introducao": "Dancing on the pointe of the toes is a hard and long work. It is important the dancers try to find the pointe shoes best fit. There are some dancers here and we can see what kind of feet they have as well as how to use the Levelers on their toes.",
+        "videos": [
+          {
+            "id": "366539673",
+            "titulo": "Feet with larger second toe"
+          },
+          {
+            "id": "366539884",
+            "titulo": "How to adjust short toes according the vamp length"
+          },
+          {
+            "id": "366540088",
+            "titulo": "Feet with larger first toe"
+          },
+          {
+            "id": "367271567",
+            "titulo": "How to share pressure over toes"
+          },
+          {
+            "id": "369575960",
+            "titulo": "Dance is precision... and Só Dança is with you"
+          }
+        ]
+      },
+      "conservacao": {
+        "adapt_titulo": "Adaptação ao tamanho dos dedos",
+        "adapt_texto": "The elastic nature of the Levelers allows it to adapt to all toes sizes. If your toes are too short and thin, use the leveler indicated for smaller toes.",
+        "cons_title": "Conservação dos niveladores",
+        "cons_texto": "Keep away from perforating materials and after each use baby powder to maintain the elasticity and soft touch."
+      },
+      "final": {
+        "texto": "The dance is precision, and every dancer wants to achieve it through the total dedication at the tireless testing and at the concentration.The dance is inherent to the dancers as well as it is inherent to the Só Dança’s DNA and to its constantly searching for evolution to provide greater comfort, safety and health for those who dance.All the dance movements and body expressions demands much feet work, so they suffer regardless of their size, shape or types of toes. By the way, types of toes are the main difference presented for the feet."
+      },
+      "labels": {
+        "newsletter_titulo": "Newsletter",
+        "newsletter_btn": "Submit",
+        "newsletter_placeholder": "Email",
+        "contato_titulo": "Contact",
+        "nome": "Name",
+        "email": "Email",
+        "assunto": "Subject",
+        "mensagem": "Message",
+        "enviar": "Send"
+      }
+    },
+    "espanol": {
+      "seo": {
+        "titulo": "Español - Sodanca World",
+        "descricao": "Con el objetivo de disminuir las diferencias que hay entre los dedos y facilitar el ajuste y la destreza en la danza, Só Dança creó Niveladores y Extensores de ",
+        "regiao": "ES-MD",
+        "cidade": "Madrid",
+        "coordenadas": "40.416775;-3.703790",
+        "llm_descricao": "Página explicativa sobre Niveladores e Extensores de Dedos da Só Dança em espanol. Desenvolvido pelo Dr. José Luiz Melo."
+      },
+      "hero": {
+        "titulo_secao": "LEVEL UP",
+        "subtitulo_secao": "Niveladores de Dedos",
+        "descricao": "Con el objetivo de disminuir las diferencias que hay entre los dedos y facilitar el ajuste y la destreza en la danza, Só Dança creó Niveladores y Extensores de Dedos para que todos los tipos de pies se acomodaran a la zapatilla de punta.Los Niveladores ofrecen protección donde tus dedos necesitan más, ajustando tus pies a todos los tipos de zapatillas Só Dança."
+      },
+      "por_que_usar": {
+        "titulo": "¿POR QUÉ UTILIZAR LOS NIVELADORES DE DEDOS SÓ DANÇA?",
+        "texto": "Dr. José Luiz Bastos Melo: “El uso adecuado de los Niveladores favorece la amortiguación de impactos y la alineación de los pies cuando te pones de puntillas, lo que ayuda a en la salud de los pies y en la prevención de formación de callos, abrasiones y posibles deformaciones.”En la Imagen 1 ni todos los dedos tocan el fondo de la zapatilla de punta, pero en la Imagen 2 ellos están nivelados y vuelven el soporte homogéneo. De esa manera, el peso corporal se distribuye uniformemente sobre todos los dedos, reduciendo la presión sobre el dedo más grande.Eso hace toda la diferencia para la bailarina porque los Niveladores favorecen la amortiguación de impacto y la alineación de los pies cuando te pones de puntillas, ayudando en la salud de los pies y en la prevención de formación de callos, abrasiones y posibles deformaciones."
+      },
+      "todos_dedos": {
+        "titulo": "Un nivelador para cada dedo",
+        "texto": "Hay 5 tallas de Niveladores, una para cada dedo del pie. Cada Nivelador viene con un Extensor y se puede insertarlo en el Nivelador para alargar los dedos todavía más. Cada paquete contiene 10 Niveladores y 10 Extensores."
+      },
+      "dr_jose": {
+        "titulo": "Dr. José Luiz de Bastos Melo, fisioterapeuta com especialidade na prevenção e tratamento de lesões decorrentes da dança",
+        "texto": "Dr. José Luiz de Bastos Melo, fisioterapeuta con especialización en prevención y tratamiento de lesiones provenientes de la danza, maestro y consultor para la creación de productos Só Dança."
+      },
+      "dicas": {
+        "introducao": "Danzar de puntillas es un largo y duro trabajo, por eso, es importante que la bailarina siempre busque el mejor ajuste de la zapatilla a sus pies. Tenemos aquí algunas bailarinas. Vamos a ver los tipos de pies que tienen y como ponerles los Niveladores de dedos.",
+        "videos": [
+          {
+            "id": "366539673",
+            "titulo": "Pies con el segundo dedo más grande"
+          },
+          {
+            "id": "366539884",
+            "titulo": "Como Ajustar dedos curtos a la largura de la capellada"
+          },
+          {
+            "id": "366540088",
+            "titulo": "Pies con el primer dedo más grande"
+          },
+          {
+            "id": "367271567",
+            "titulo": "Como distribuir la presión sobre los dedos"
+          },
+          {
+            "id": "369575960",
+            "titulo": "Danza es precisión... y Só Dança está contigo"
+          }
+        ]
+      },
+      "conservacao": {
+        "adapt_titulo": "Ajuste a dedos de diferentes tamaños",
+        "adapt_texto": "La naturaleza elástica de los Niveladores les permite adaptarse a dedos de todos los tamaños. Si tus dedos son demasiado cortos y delgados, usa en ellos los Niveladores indicados para los dedos más pequeños.",
+        "cons_title": "Conservación de los niveladores",
+        "cons_texto": "Déjalos alejados de materiales perforantes y guárdalos en talco después de cada uso para mantener la elasticidad y toque suave."
+      },
+      "final": {
+        "texto": "Danza es precisión… y eso es lo que todos los bailarines buscan a través de los incansables ensayos y en la concentración.La danza es tan inherente a los bailarines como es a Só Dança y su constante búsqueda por la evolución en ofrecer más comodidad, seguridad y salud para los que danzan.Todos los movimientos y expresiones corporales en la danza exigen mucho de los pies y ellos sufren no importa que talla, forma o tipo de dedos tienen. Los tipos de dedos es la principal diferencia que hay de un pie a otro."
+      },
+      "labels": {
+        "newsletter_titulo": "Boletín Informativo",
+        "newsletter_btn": "Enviar",
+        "newsletter_placeholder": "Email",
+        "contato_titulo": "Contacto",
+        "nome": "Nombre",
+        "email": "Email",
+        "assunto": "Asunto",
+        "mensagem": "Mensaje",
+        "enviar": "Enviar"
+      }
+    },
+    "france": {
+      "seo": {
+        "titulo": "France - Sodanca World",
+        "descricao": "Pour minimiser les différences entre les orteils et faciliter l'ajustement et les résultats, Só Dance a développé des correcteurs et des extendeurs d’orte",
+        "regiao": "FR-IDF",
+        "cidade": "Paris",
+        "coordenadas": "48.856614;2.352222",
+        "llm_descricao": "Página explicativa sobre Niveladores e Extensores de Dedos da Só Dança em france. Desenvolvido pelo Dr. José Luiz Melo."
+      },
+      "hero": {
+        "titulo_secao": "LEVEL UP",
+        "subtitulo_secao": "Niveladores de Dedos",
+        "descricao": "Pour minimiser les différences entre les orteils et faciliter l'ajustement et les résultats, Só Dance a développé des correcteurs et des extendeurs d’orteils pour que tous les types de pieds s'adaptent parfaitement aux pointes.Les correcteurs protègent vos orteils là où ils en ont le plus besoin, en adaptant vos pieds à tous les modèles de pointes Só Dança."
+      },
+      "por_que_usar": {
+        "titulo": "POURQUOI UTILISER LES CORRECTEURS D’ORTEILS SÓ DANÇA ?",
+        "texto": "Dr. José Luiz Bastos Melo: L’utilisation correcte des correcteurs favorise l’amortissement et l’alignement des pieds lorsque vous êtes sur les pointes, ce qui permet d’améliorer la santé de vos pieds, tout en évitant les callosités, les blessures et déformations. \"Sur l’image 1, les orteils ne touchent pas tous le bas de la pointe, mais sur l’image 2, ils sont au même niveau. Ainsi, le soutien physique est homogène et le poids corporel est réparti uniformément sur tous les orteils, ce qui réduit la pression exercée.Cela fait toute la différence pour la ballerine, car les correcteurs privilégient l'amortissement des impacts et l'alignement de l'axe des pieds lors du basculement, contribuant ainsi à améliorer la santé des pieds et à prévenir les callosités, les blessures et les déformations possibles."
+      },
+      "todos_dedos": {
+        "titulo": "Correcteurs pour tous les orteils",
+        "texto": "Il y a 5 tailles, une pour chaque orteil. Chaque correcteur est accompagné d'un extendeur, qui peut être inséré à l’intérieur du Correcteur pour augmenter la longueur de l’orteil. Chaque paquet contient dix correcteurs et dix extendeurs."
+      },
+      "dr_jose": {
+        "titulo": "Dr. José Luiz de Bastos Melo",
+        "texto": "Médecin José Luiz de Bastos Melo, un physiothérapeute avec une spécialité dans la prévention et le traitement des lésions dues à la danse, conférencier et consultant dans le développement de produits pour le Só Dança.Responsable du développement des Correcteurs et Extenseurs Só Dança, Dr. José Luiz a travaillé avec des danseurs et des professionnels de la danse pour comprendre leurs besoins réels et trouver des moyens d'atténuer des problèmes apparemment simples, mais qui posent des nombreuses difficultés pour les danseurs, enseignants, en particulier dans le travail sur les pointes."
+      },
+      "dicas": {
+        "introducao": "En danse, le travail sur les pointes est un travail difficile et long, et il est toujours important que la ballerine cherche à obtenir le meilleur ajustement des chaussons à ses pieds. Ici vous voyez les ballerines et nous allons examiner leurs types de pieds et comment utiliser les correcteurs d’orteil.",
+        "videos": [
+          {
+            "id": "374173727",
+            "titulo": "Pieds avec le deuxième orteil plus grand"
+          },
+          {
+            "id": "374173798",
+            "titulo": "Comment ajuster les orteils courts à la taille de la partie supérieure"
+          },
+          {
+            "id": "374173873",
+            "titulo": "Pieds avec le premier orteil plus gros"
+          },
+          {
+            "id": "374173663",
+            "titulo": "Comment distribuer la pression sur les doigts"
+          },
+          {
+            "id": "372639284",
+            "titulo": "La danse, c'est la précision... et Só Dança est là"
+          }
+        ]
+      },
+      "conservacao": {
+        "adapt_titulo": "Adaptation à la taille des orteils",
+        "adapt_texto": "La nature élastique des correcteurs leur permet de s’adapter à toutes les tailles. Si nécessaire, utilisez des ciseaux pour réduire les correcteurs, d’une seule coupe.Si vos orteils sont trop courts et fins, utilisez le correcteur pour des petits orteils.",
+        "cons_title": "Conservation des correcteurs",
+        "cons_texto": "Tenez-les à l'écart des objets perforants et de la poudre de talc après chaque utilisation pour maintenir l'élasticité et le toucher doux."
+      },
+      "final": {
+        "texto": "La danse, c'est la précision ... c'est ça que chaque danseur cherche, avec dévouement et concentration total, dans des répétitions inlassables.La danse est inhérente aux danseurs et à l'âme de Só Dança dans sa recherche constante d'évolution, de chercher à apporter plus de confort, de sécurité et de santé aux danseurs.Tous les mouvements et expressions du corps dans la danse exigent beaucoup des pieds, qui souffrent indépendamment de la taille, de la forme ou de la terminaison des orteils, ce qui constitue la principale différence entre les pieds."
+      },
+      "labels": {
+        "newsletter_titulo": "Newsletter",
+        "newsletter_btn": "Envoyer",
+        "newsletter_placeholder": "Email",
+        "contato_titulo": "Contact",
+        "nome": "Nom",
+        "email": "Email",
+        "assunto": "Sujet",
+        "mensagem": "Message",
+        "enviar": "Envoyer"
+      }
+    },
+    "italia": {
+      "seo": {
+        "titulo": "Italia - Sodanca World",
+        "descricao": "Per ridurre al minimo le differenze tra le punte e facilitare la regolazione e l'esecuzione nella danza, Só Dança ha sviluppato il correttore ed estensore",
+        "regiao": "IT-RM",
+        "cidade": "Roma",
+        "coordenadas": "41.902783;12.496366",
+        "llm_descricao": "Página explicativa sobre Niveladores e Extensores de Dedos da Só Dança em italia. Desenvolvido pelo Dr. José Luiz Melo."
+      },
+      "hero": {
+        "titulo_secao": "LEVEL UP",
+        "subtitulo_secao": "Niveladores de Dedos",
+        "descricao": "Per ridurre al minimo le differenze tra le punte e facilitare la regolazione e l'esecuzione nella danza, Só Dança ha sviluppato il correttore ed estensore  Level up, in modo che tutti i tipi di piedi si adattino perfettamente alle scarpe da punta.I correttori proteggono le punte dei piedi dove ne hanno più bisogno, adattando i piedi a tutti i modelli di scarpe da punta Só Dança."
+      },
+      "por_que_usar": {
+        "titulo": "PERCHÉ UTILIZZARE IL CORRETTORE PUNTE SÓ DANÇA?",
+        "texto": "Dr. José Luiz Bastos Melo: “L'uso corretto del correttore favorisce l'ammortizzazione e l'allineamento dei piedi quando si danza sulle punte, contribuendo a migliorare la salute dei piedi, aiutando a prevenire calli, danni e possibili deformazioni. \"Nella Figura 1 non tutte le dita toccano la parte inferiore delle scarpette, ma nella Figura 2 sono livellate, quindi il supporto fisico è più omogeneo e il peso corpóreo è distribuito uniformemente su tutte le punte, riducendo la pressione sul 1º dito.Questo fa la differenza per la ballerina, perché il correttore favorisce l'ammortizzazione e l'allineamento dell'asse dei piedi quando sulle punte, contribuendo a migliorare la salute del piede e aiutando a prevenire calli, danni e possibili deformazioni."
+      },
+      "todos_dedos": {
+        "titulo": "Corretori per tutte le dita",
+        "texto": "Ci sono 5 taglie, una per ogni dita. Ogni correttore viene accompagnato da un estensore, che può essere inserito nel correttore per aumentare la lunghezza del dito. Ogni confezione contiene dieci correttori e dieci estensori."
+      },
+      "dr_jose": {
+        "titulo": "Dr. José Luiz de Bastos Melo",
+        "texto": "Medico José Luiz de Bastos Melo, fisioterapista specializzato nella prevenzione e nel trattamento delle lesioni dovute alla danza, relatore e consulente nello sviluppo di prodotti per la Só Dança.Responsabile dello sviluppo dei correttori ed estensori Só Dança, il Dott. José Luiz ha lavorato con ballerini e professionisti della danza per comprendere le loro esigenze e trovare modi per alleviare problemi apparentemente semplici che creano molte difficoltà alle ballerine, insegnanti, soprattutto durante il lavoro sulle punte.Dita corte, difficoltà a passare attraverso la mezza punta ... Primo o secondo dito molto lungo, difficoltà a trovare l'equilibrio sulle punte ... Lesioni e tante altre cose che ostacolano l'esecuzione, sia a livello intermedio e professionale che a principiante, vengono alleviate con l'uso dei correttori ed estensori Só Dança.Le ballerine indicano i loro bisogni e Só Dance crea prodotti che li soddisfano in modo semplice ed efficace."
+      },
+      "dicas": {
+        "introducao": "Nella danza, il lavoro sulle punte è qualcosa di pesante, ed è sempre importante per la ballerina cercare la migliore calzata della scarpa ai suoi piedi. Abbiamo qui alcune ballerine qui e vedremo i tipi di piedi che hanno e come usare i correttori per le dita.",
+        "videos": [
+          {
+            "id": "374173727",
+            "titulo": "Piedi con il 2º dito più grande"
+          },
+          {
+            "id": "374173798",
+            "titulo": "Come adattare le dita corte alle dimensioni della suola"
+          },
+          {
+            "id": "374173873",
+            "titulo": "Piedi con il 1º dito più grande"
+          },
+          {
+            "id": "374173663",
+            "titulo": "Come distribuire la pressione sulle dita"
+          },
+          {
+            "id": "372639284",
+            "titulo": "La danza significa precisione... e Só Dança è con te"
+          }
+        ]
+      },
+      "conservacao": {
+        "adapt_titulo": "Adattando alla taglia delle dita",
+        "adapt_texto": "La natura elastica dei correttori consente di adattarli a tutte le dimensioni di dita. Se necessario, utilizzare le forbici per diminuire il correttore , da un singolo taglio.Se le dita sono troppo corte, utilizzare il correttore per dita più piccole.",
+        "cons_title": "Come conservare i correttore",
+        "cons_texto": "Tenerli lontano da materiali perforanti e talco dopo ogni utilizzo per mantenere l'elasticità e il tocco morbido."
+      },
+      "final": {
+        "texto": "La danza significa precisione ... è ciò che ogni ballerino cerca con totale dedizione nelle prove instancabili, e anche nella concentrazione.La danza è intrinseca ai ballerini e al DNA di Só Dança, nella sua costante ricerca dell'evoluzione, di offrire piú comfort, sicurezza e salute a coloro che ballano."
+      },
+      "labels": {
+        "newsletter_titulo": "Newsletter",
+        "newsletter_btn": "Invia",
+        "newsletter_placeholder": "Email",
+        "contato_titulo": "Contatti",
+        "nome": "Nome",
+        "email": "Email",
+        "assunto": "Oggetto",
+        "mensagem": "Messaggio",
+        "enviar": "Invia"
+      }
+    },
+    "latin-america": {
+      "seo": {
+        "titulo": "Latin America - Sodanca World",
+        "descricao": "Con el objetivo de disminuir las diferencias que hay entre los dedos y facilitar el ajuste y la destreza en la danza, Só Dança creó Niveladores y Extensores de ",
+        "regiao": "MX-MEX",
+        "cidade": "Ciudad de México",
+        "coordenadas": "19.432608;-99.133208",
+        "llm_descricao": "Página explicativa sobre Niveladores e Extensores de Dedos da Só Dança em latin-america. Desenvolvido pelo Dr. José Luiz Melo."
+      },
+      "hero": {
+        "titulo_secao": "LEVEL UP",
+        "subtitulo_secao": "Niveladores de Dedos",
+        "descricao": "Con el objetivo de disminuir las diferencias que hay entre los dedos y facilitar el ajuste y la destreza en la danza, Só Dança creó Niveladores y Extensores de Dedos para que todos los tipos de pies se acomodaran a la zapatilla de punta.Los Niveladores ofrecen protección donde tus dedos necesitan más, ajustando tus pies a todos los tipos de zapatillas Só Dança."
+      },
+      "por_que_usar": {
+        "titulo": "¿POR QUÉ UTILIZAR LOS NIVELADORES DE DEDOS SÓ DANÇA?",
+        "texto": "Dr. José Luiz Bastos Melo: “El uso adecuado de los Niveladores favorece la amortiguación de impactos y la alineación de los pies cuando te pones de puntillas, lo que ayuda a en la salud de los pies y en la prevención de formación de callos, abrasiones y posibles deformaciones.”En la Imagen 1 ni todos los dedos tocan el fondo de la zapatilla de punta, pero en la Imagen 2 ellos están nivelados y vuelven el soporte homogéneo. De esa manera, el peso corporal se distribuye uniformemente sobre todos los dedos, reduciendo la presión sobre el dedo más grande.Eso hace toda la diferencia para la bailarina porque los Niveladores favorecen la amortiguación de impacto y la alineación de los pies cuando te pones de puntillas, ayudando en la salud de los pies y en la prevención de formación de callos, abrasiones y posibles deformaciones."
+      },
+      "todos_dedos": {
+        "titulo": "Un nivelador para cada dedo",
+        "texto": "Hay 5 tallas de Niveladores, una para cada dedo del pie. Cada Nivelador viene con un Extensor y se puede insertarlo en el Nivelador para alargar los dedos todavía más. Cada paquete contiene 10 Niveladores y 10 Extensores."
+      },
+      "dr_jose": {
+        "titulo": "Dr. José Luiz de Bastos Melo, fisioterapeuta com especialidade na prevenção e tratamento de lesões decorrentes da dança",
+        "texto": "Dr. José Luiz de Bastos Melo, fisioterapeuta con especialización en prevención y tratamiento de lesiones provenientes de la danza, maestro y consultor para la creación de productos Só Dança."
+      },
+      "dicas": {
+        "introducao": "Danzar de puntillas es un largo y duro trabajo, por eso, es importante que la bailarina siempre busque el mejor ajuste de la zapatilla a sus pies. Tenemos aquí algunas bailarinas. Vamos a ver los tipos de pies que tienen y como ponerles los Niveladores de dedos.",
+        "videos": [
+          {
+            "id": "366539673",
+            "titulo": "Pies con el segundo dedo más grande"
+          },
+          {
+            "id": "366539884",
+            "titulo": "Como Ajustar dedos curtos a la largura de la capellada"
+          },
+          {
+            "id": "366540088",
+            "titulo": "Pies con el primer dedo más grande"
+          },
+          {
+            "id": "367271567",
+            "titulo": "Como distribuir la presión sobre los dedos"
+          },
+          {
+            "id": "369575960",
+            "titulo": "Danza es precisión... y Só Dança está contigo"
+          }
+        ]
+      },
+      "conservacao": {
+        "adapt_titulo": "Ajuste a dedos de diferentes tamaños",
+        "adapt_texto": "La naturaleza elástica de los Niveladores les permite adaptarse a dedos de todos los tamaños. Si tus dedos son demasiado cortos y delgados, usa en ellos los Niveladores indicados para los dedos más pequeños.",
+        "cons_title": "Conservación de los niveladores",
+        "cons_texto": "Déjalos alejados de materiales perforantes y guárdalos en talco después de cada uso para mantener la elasticidad y toque suave."
+      },
+      "final": {
+        "texto": "Danza es precisión… y eso es lo que todos los bailarines buscan a través de los incansables ensayos y en la concentración.La danza es tan inherente a los bailarines como es a Só Dança y su constante búsqueda por la evolución en ofrecer más comodidad, seguridad y salud para los que danzan.Todos los movimientos y expresiones corporales en la danza exigen mucho de los pies y ellos sufren no importa que talla, forma o tipo de dedos tienen. Los tipos de dedos es la principal diferencia que hay de un pie a otro."
+      },
+      "labels": {
+        "newsletter_titulo": "Boletín Informativo",
+        "newsletter_btn": "Enviar",
+        "newsletter_placeholder": "Email",
+        "contato_titulo": "Contacto",
+        "nome": "Nombre",
+        "email": "Email",
+        "assunto": "Asunto",
+        "mensagem": "Mensaje",
+        "enviar": "Enviar"
+      }
+    }
+  }
+}

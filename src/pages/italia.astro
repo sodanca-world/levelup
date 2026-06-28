@@ -1,0 +1,43 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Fisioterapeuta from '../components/Fisioterapeuta.astro';
+import VideoSection from '../components/VideoSection.astro';
+import Ajuste from '../components/Ajuste.astro';
+import siteData from '../data/siteData.json';
+
+const lang = 'italia';
+const data = siteData.idiomas[lang];
+---
+
+<Layout lang={lang}>
+  <Header currentLang={lang} />
+  <main>
+    <Hero 
+      titulo_secao={data.hero.titulo_secao}
+      subtitulo_secao={data.hero.subtitulo_secao}
+      descricao={data.hero.descricao}
+    />
+    <Fisioterapeuta 
+      por_que_usar_titulo={data.por_que_usar.titulo}
+      por_que_usar_texto={data.por_que_usar.texto}
+      todos_dedos_titulo={data.todos_dedos.titulo}
+      todos_dedos_texto={data.todos_dedos.texto}
+      dr_jose_titulo={data.dr_jose.titulo}
+      dr_jose_texto={data.dr_jose.texto}
+    />
+    <VideoSection 
+      introducao={data.dicas.introducao}
+      videos={data.dicas.videos}
+    />
+    <Ajuste 
+      adapt_titulo={data.conservacao.adapt_titulo}
+      adapt_texto={data.conservacao.adapt_texto}
+      cons_title={data.conservacao.cons_title}
+      cons_texto={data.conservacao.cons_texto}
+      final_texto={data.final.texto}
+      labels={data.labels}
+    />
+  </main>
+</Layout>

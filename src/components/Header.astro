@@ -1,0 +1,101 @@
+---
+import siteData from '../data/siteData.json';
+
+interface Props {
+  currentLang: string;
+}
+
+const { currentLang } = Astro.props;
+const { menu_idiomas } = siteData;
+---
+<header class="site-header">
+  <div class="container header-container">
+    <div class="header-logo">
+      <a href="/">
+        <img src="/assets/images/Logo.png" alt="Só Dança Logo" class="header-logo-img" />
+      </a>
+    </div>
+    <nav class="header-nav">
+      <div class="lang-nav-bar">
+        {menu_idiomas.map((item) => (
+          <a 
+            href={item.path} 
+            class={`lang-nav-pill ${item.id === currentLang ? 'active' : ''}`}
+            title={item.nome}
+          >
+            <img src={`/assets/images/${item.image}`} alt={item.nome} />
+          </a>
+        ))}
+      </div>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    background-color: var(--color-white);
+    border-bottom: 1px solid var(--color-border);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow-subtle);
+  }
+
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header-logo-img {
+    height: 45px;
+    width: auto;
+  }
+
+  .lang-nav-bar {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .lang-nav-pill {
+    background: var(--color-bg-light);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: var(--transition-smooth);
+    border-top: 3px solid var(--color-border);
+  }
+
+  .lang-nav-pill:hover,
+  .lang-nav-pill.active {
+    transform: translateY(-2px);
+    border-top-color: var(--color-primary);
+    background-color: var(--color-white);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .lang-nav-pill.active {
+    font-weight: 700;
+  }
+
+  .lang-nav-pill img {
+    height: 24px;
+    width: auto;
+  }
+
+  @media (max-width: 768px) {
+    .header-container {
+      flex-direction: column;
+      gap: 15px;
+      text-align: center;
+    }
+    .lang-nav-bar {
+      justify-content: center;
+    }
+  }
+</style>

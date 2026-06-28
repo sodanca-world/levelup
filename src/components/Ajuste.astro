@@ -1,0 +1,331 @@
+---
+import siteData from "../data/siteData.json";
+
+interface Props {
+  adapt_titulo: string;
+  adapt_texto: string;
+  cons_title: string;
+  cons_texto: string;
+  final_texto: string;
+  labels: {
+    newsletter_titulo: string;
+    newsletter_btn: string;
+    newsletter_placeholder: string;
+    contato_titulo: string;
+    nome: string;
+    email: string;
+    assunto: string;
+    mensagem: string;
+    enviar: string;
+  };
+}
+
+const {
+  adapt_titulo,
+  adapt_texto,
+  cons_title,
+  cons_texto,
+  final_texto,
+  labels,
+} = Astro.props;
+
+const { configuracoes } = siteData;
+---
+
+<section class="adjustment-section">
+  <div class="container">
+    <!-- Ajuste e Conservação -->
+    <div class="grid-2 adjust-grid">
+      <div class="adjust-card reveal">
+        <div class="adjust-icon">
+          <i class="fas fa-hand-holding-heart"></i>
+        </div>
+        <h3 class="adjust-card-title">{adapt_titulo}</h3>
+        <p class="adjust-card-text">{adapt_texto}</p>
+      </div>
+
+      <div class="adjust-card reveal delay-2">
+        <div class="adjust-icon">
+          <i class="fas fa-sparkles"></i>
+        </div>
+        <h3 class="adjust-card-title">{cons_title}</h3>
+        <p class="adjust-card-text">{cons_texto}</p>
+      </div>
+    </div>
+
+    <!-- Texto Final Motivacional -->
+    {
+      final_texto && (
+        <div class="final-banner reveal">
+          <p class="final-text">{final_texto}</p>
+        </div>
+      )
+    }
+
+    <!-- Formulários: Newsletter e Contato -->
+    <div class="grid-2 forms-grid" id="contato">
+      <!-- Newsletter -->
+      <div class="form-card newsletter-card reveal">
+        <h3 class="form-card-title">{labels.newsletter_titulo}</h3>
+        <div class="title-decor-sub"></div>
+        <form
+          action={`https://formspree.io/f/${configuracoes.formspree_id}`}
+          method="POST"
+          class="newsletter-form"
+        >
+          <div class="form-group-single">
+            <input
+              type="email"
+              name="email"
+              placeholder={labels.newsletter_placeholder}
+              required
+              class="form-input"
+            />
+            <button type="submit" class="btn btn-primary"
+              >{labels.newsletter_btn}</button
+            >
+          </div>
+        </form>
+      </div>
+
+      <!-- Contato -->
+      <div class="form-card contact-card reveal delay-2">
+        <h3 class="form-card-title">{labels.contato_titulo}</h3>
+        <div class="title-decor-sub"></div>
+        <form
+          action={`https://formspree.io/f/${configuracoes.formspree_id}`}
+          method="POST"
+          class="contact-form"
+        >
+          <div class="form-group">
+            <input
+              type="text"
+              name="name"
+              placeholder={labels.nome}
+              required
+              class="form-input"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="email"
+              name="email"
+              placeholder={labels.email}
+              required
+              class="form-input"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              name="subject"
+              placeholder={labels.assunto}
+              class="form-input"
+            />
+          </div>
+          <div class="form-group">
+            <textarea
+              name="message"
+              rows="4"
+              placeholder={labels.mensagem}
+              required
+              class="form-input form-textarea"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full"
+            >{labels.enviar}</button
+          >
+        </form>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-section reveal">
+      <img
+        src="/assets/images/Logo.png"
+        alt="Só Dança Logo Footer"
+        class="footer-logo"
+      />
+      <p class="copyright">
+        © {new Date().getFullYear()} Só Dança. All rights reserved.
+      </p>
+    </footer>
+  </div>
+</section>
+
+<!-- Adicionando FontAwesome para os ícones -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
+
+<style>
+  .adjustment-section {
+    padding: 90px 0 40px 0;
+    background-color: var(--color-white);
+  }
+
+  .adjust-grid {
+    margin-bottom: 70px;
+    align-items: stretch;
+  }
+
+  .adjust-card {
+    background-color: var(--color-bg-light);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: var(--shadow-subtle);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .adjust-icon {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+  }
+
+  .adjust-card-title {
+    font-family: var(--font-title);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-dark);
+    margin-bottom: 15px;
+  }
+
+  .adjust-card-text {
+    font-size: 1rem;
+    color: var(--color-dark-light);
+    line-height: 1.7;
+  }
+
+  /* Banner Final */
+  .final-banner {
+    background: var(--color-primary-light);
+    border-left: 5px solid var(--color-primary);
+    padding: 30px 40px;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 80px;
+    box-shadow: var(--shadow-subtle);
+  }
+
+  .final-text {
+    font-size: 1.15rem;
+    color: var(--color-primary-dark);
+    font-weight: 500;
+    line-height: 1.7;
+    text-align: center;
+  }
+
+  /* Form Cards */
+  .forms-grid {
+    margin-bottom: 80px;
+    align-items: start;
+  }
+
+  .form-card {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 40px 30px;
+    box-shadow: var(--shadow-card);
+  }
+
+  .form-card-title {
+    font-family: var(--font-title);
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--color-dark);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+  }
+
+  .title-decor-sub {
+    width: 40px;
+    height: 3px;
+    background-color: var(--color-primary);
+    margin-bottom: 30px;
+  }
+
+  .form-input {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: var(--color-dark);
+    background-color: var(--color-bg-light);
+    transition: var(--transition-smooth);
+  }
+
+  .form-input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    background-color: var(--color-white);
+    box-shadow: 0 0 8px rgba(28, 198, 178, 0.2);
+  }
+
+  .form-textarea {
+    resize: vertical;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .btn-full {
+    width: 100%;
+    padding: 14px;
+  }
+
+  /* Newsletter Form Single Row */
+  .form-group-single {
+    display: flex;
+    gap: 10px;
+  }
+
+  .form-group-single .form-input {
+    flex: 1;
+  }
+
+  /* Footer */
+  .footer-section {
+    text-align: center;
+    border-top: 1px solid var(--color-border);
+    padding-top: 40px;
+  }
+
+  .footer-logo {
+    height: 40px;
+    width: auto;
+    margin: 0 auto 15px auto;
+    opacity: 0.8;
+  }
+
+  .copyright {
+    font-size: 0.85rem;
+    color: var(--color-dark-light);
+  }
+
+  @media (max-width: 900px) {
+    .adjust-grid {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+    .forms-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+    .final-banner {
+      padding: 20px;
+      margin-bottom: 50px;
+    }
+    .form-group-single {
+      flex-direction: column;
+    }
+  }
+</style>

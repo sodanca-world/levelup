@@ -1,0 +1,132 @@
+---
+interface Props {
+  titulo_secao: string;
+  subtitulo_secao: string;
+  descricao: string;
+}
+
+const { titulo_secao, subtitulo_secao, descricao } = Astro.props;
+---
+
+<section class="hero-section">
+  <div class="bg-overlay-hero"></div>
+  <div class="container hero-container">
+    <!-- Removido o reveal do container de vidro para evitar conflito de transform no backdrop-filter -->
+    <div class="hero-content">
+      <div class="reveal">
+        <span class="hero-badge">{subtitulo_secao}</span>
+        <h1 class="hero-title">{titulo_secao}</h1>
+        <div class="title-decor"></div>
+        <p class="hero-desc">{descricao}</p>
+        <a href="#contato" class="btn btn-primary">Fale Conosco</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-section {
+    position: relative;
+    background-image: url("/assets/images/embalagem.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 120px 0;
+    min-height: 550px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .bg-overlay-hero {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.04); /* Sutil overlay para integrar a imagem */
+    z-index: 1;
+  }
+
+  .hero-container {
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-badge {
+    color: var(--color-primary-dark);
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+
+  .hero-title {
+    font-family: var(--font-title);
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--color-dark);
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+    margin-bottom: 15px;
+  }
+
+  .title-decor {
+    width: 60px;
+    height: 4px;
+    background-color: var(--color-primary);
+    margin-bottom: 25px;
+  }
+
+  .hero-desc {
+    font-size: 1.125rem;
+    color: var(--color-dark);
+    margin-bottom: 30px;
+    line-height: 1.7;
+    font-weight: 500;
+  }
+
+  /* Card de Vidro Real (Glassmorphism) */
+  .hero-content {
+    max-width: 520px;
+    text-align: left;
+    background: rgba(
+      255,
+      255,
+      255,
+      0.35
+    ); /* Opacidade reduzida para maior transparência */
+    backdrop-filter: blur(16px) saturate(120%); /* Blur e saturação aumentados para efeito de vidro */
+    -webkit-backdrop-filter: blur(16px) saturate(120%);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.6); /* Borda branca simulando reflexo de vidro */
+  }
+
+  @media (max-width: 900px) {
+    .hero-section {
+      background-image: url("/assets/images/embalagem-celular.jpg");
+      padding: 85px 0;
+      min-height: auto;
+    }
+    .hero-content {
+      max-width: 100%;
+      text-align: center;
+      padding: 35px 20px;
+      background: rgba(
+        255,
+        255,
+        255,
+        0.7
+      ); /* Mobile ligeiramente mais transparente */
+    }
+    .title-decor {
+      margin: 0 auto 25px auto;
+    }
+    .hero-title {
+      font-size: 2.5rem;
+    }
+  }
+</style>

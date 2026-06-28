@@ -1,0 +1,210 @@
+---
+interface Props {
+  por_que_usar_titulo: string;
+  por_que_usar_texto: string;
+  todos_dedos_titulo: string;
+  todos_dedos_texto: string;
+  dr_jose_titulo: string;
+  dr_jose_texto: string;
+}
+
+const { 
+  por_que_usar_titulo, 
+  por_que_usar_texto, 
+  todos_dedos_titulo, 
+  todos_dedos_texto, 
+  dr_jose_titulo, 
+  dr_jose_texto 
+} = Astro.props;
+
+// O texto original possui parágrafos quebrados por quebras de linha ou caracteres especiais
+// Vamos quebrar o texto por quebras de linha para renderizar tags <p> limpas
+const whyParagraphs = por_que_usar_texto.split('\n').filter(p => p.trim() !== '');
+const bioParagraphs = dr_jose_texto.split('\n').filter(p => p.trim() !== '');
+---
+<section class="physio-section">
+  <div class="container">
+    
+    <!-- Sub-seção 1: Por que usar -->
+    <div class="grid-2 why-use-grid">
+      <div class="why-content reveal">
+        <h2 class="section-title">{por_que_usar_titulo}</h2>
+        <div class="title-decor"></div>
+        <div class="why-text">
+          {whyParagraphs.map(p => (
+            <p>{p}</p>
+          ))}
+        </div>
+      </div>
+      <div class="why-image reveal delay-2">
+        <div class="fig-box">
+          <img src="/assets/images/figuras-1.png" alt="Figura 1 e 2 - Alinhamento dos dedos Só Dança" class="fig-img" />
+          <span class="fig-caption">Fig. 1: Dedos sem nivelamento | Fig. 2: Dedos perfeitamente nivelados</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sub-seção 2: Niveladores para todos os dedos -->
+    <div class="all-toes-banner reveal">
+      <div class="all-toes-content">
+        <h3 class="all-toes-title">{todos_dedos_titulo}</h3>
+        <p class="all-toes-desc">{todos_dedos_texto}</p>
+      </div>
+    </div>
+
+    <!-- Sub-seção 3: Biografia do Dr. José Luiz -->
+    <div class="grid-2 bio-grid">
+      <div class="bio-image reveal">
+        <img src="/assets/images/Jose-Luis-1.jpg" alt="Dr. José Luiz de Bastos Melo" class="doctor-img" />
+      </div>
+      <div class="bio-content reveal delay-2">
+        <h3 class="bio-title">{dr_jose_titulo}</h3>
+        <div class="bio-text">
+          {bioParagraphs.map(p => (
+            <p>{p}</p>
+          ))}
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .physio-section {
+    padding: 100px 0;
+    background-color: var(--color-white);
+  }
+
+  .why-use-grid {
+    margin-bottom: 80px;
+  }
+
+  .section-title {
+    font-family: var(--font-title);
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--color-dark);
+    line-height: 1.2;
+    margin-bottom: 15px;
+  }
+
+  .title-decor {
+    width: 50px;
+    height: 3px;
+    background-color: var(--color-primary);
+    margin-bottom: 25px;
+  }
+
+  .why-text p {
+    font-size: 1.05rem;
+    color: var(--color-dark-light);
+    margin-bottom: 20px;
+    line-height: 1.7;
+    text-align: justify;
+  }
+
+  .fig-box {
+    background: var(--color-bg-light);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: var(--shadow-subtle);
+  }
+
+  .fig-img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+
+  .fig-caption {
+    font-size: 0.8rem;
+    color: var(--color-dark-light);
+    font-style: italic;
+  }
+
+  /* Banner de todos os dedos */
+  .all-toes-banner {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    color: var(--color-white);
+    border-radius: 8px;
+    padding: 50px;
+    text-align: center;
+    margin-bottom: 80px;
+    box-shadow: var(--shadow-medium);
+  }
+
+  .all-toes-title {
+    font-family: var(--font-title);
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+
+  .all-toes-desc {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    opacity: 0.95;
+  }
+
+  /* Biografia do Fisioterapeuta */
+  .bio-grid {
+    align-items: center;
+  }
+
+  .doctor-img {
+    border-radius: 8px;
+    box-shadow: var(--shadow-medium);
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    border: 4px solid var(--color-bg-light);
+  }
+
+  .bio-title {
+    font-family: var(--font-title);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-dark);
+    line-height: 1.3;
+    margin-bottom: 20px;
+  }
+
+  .bio-text p {
+    font-size: 1.05rem;
+    color: var(--color-dark-light);
+    margin-bottom: 18px;
+    line-height: 1.7;
+    text-align: justify;
+  }
+
+  @media (max-width: 900px) {
+    .physio-section {
+      padding: 60px 0;
+    }
+    .why-use-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+    .bio-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+    .doctor-img {
+      max-width: 320px;
+    }
+    .all-toes-banner {
+      padding: 30px 20px;
+      margin-bottom: 50px;
+    }
+    .all-toes-title {
+      font-size: 1.5rem;
+    }
+  }
+</style>
