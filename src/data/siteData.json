@@ -2,9 +2,12 @@
   "configuracoes": {
     "empresa_nome": "Só Dança",
     "empresa_logo_imagem": "Logo.png",
-    "empresa_email": "contato@sodanca.com.br",
+    "empresa_email": "contato@sodanca.world",
     "empresa_site_base": "https://levelup.sodanca.world",
-    "formspree_id": "xzbkbkge"
+    "formspree_id": "xzbkbkge",
+    "webhook_url": "https://n8n.netcidade.com/webhook/forms-geral",
+    "webhook_token": "netcidade-secure-token-2026",
+    "email_destino": "kreativ@kreativbr.com"
   },
   "menu_idiomas": [
     {

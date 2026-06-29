@@ -2,6 +2,7 @@
 import siteData from "../data/siteData.json";
 
 interface Props {
+  lang: string;
   adapt_titulo: string;
   adapt_texto: string;
   cons_title: string;
@@ -21,6 +22,7 @@ interface Props {
 }
 
 const {
+  lang,
   adapt_titulo,
   adapt_texto,
   cons_title,
@@ -30,6 +32,21 @@ const {
 } = Astro.props;
 
 const { configuracoes } = siteData;
+const webhookUrl = configuracoes.webhook_url || '';
+const webhookToken = configuracoes.webhook_token || '';
+const emailDestino = configuracoes.email_destino || '';
+
+// Mapeamento dos idiomas de forma amigável
+const idiomasNomes: Record<string, string> = {
+  portugues: "Português",
+  english: "English",
+  espanol: "España",
+  france: "France",
+  italia: "Italia",
+  "latin-america": "Latin America"
+};
+const langName = idiomasNomes[lang] || lang;
+const siteValue = `Só Dança Level Up - ${langName}`;
 ---
 
 <section class="adjustment-section">
@@ -69,10 +86,18 @@ const { configuracoes } = siteData;
         <h3 class="form-card-title">{labels.newsletter_titulo}</h3>
         <div class="title-decor-sub"></div>
         <form
-          action={`https://formspree.io/f/${configuracoes.formspree_id}`}
+          id="newsletter-form"
+          action={webhookUrl}
           method="POST"
           class="newsletter-form"
         >
+          <!-- Campos de Controle do Webhook N8N -->
+          <input type="hidden" name="_site" value={siteValue} />
+          <input type="hidden" name="_form" value="Newsletter" />
+          <input type="hidden" name="_subject" value={`Inscrição na Newsletter do site Só Dança Level Up (${langName})`} />
+          <input type="hidden" name="_token" value={webhookToken} />
+          <input type="hidden" name="_to" value={emailDestino} />
+
           <div class="form-group-single">
             <input
               type="email"
@@ -85,6 +110,7 @@ const { configuracoes } = siteData;
               >{labels.newsletter_btn}</button
             >
           </div>
+          <div id="newsletter-feedback" class="status-msg"></div>
         </form>
       </div>
 
@@ -93,10 +119,18 @@ const { configuracoes } = siteData;
         <h3 class="form-card-title">{labels.contato_titulo}</h3>
         <div class="title-decor-sub"></div>
         <form
-          action={`https://formspree.io/f/${configuracoes.formspree_id}`}
+          id="contact-form"
+          action={webhookUrl}
           method="POST"
           class="contact-form"
         >
+          <!-- Campos de Controle do Webhook N8N -->
+          <input type="hidden" name="_site" value={siteValue} />
+          <input type="hidden" name="_form" value="Contato" />
+          <input type="hidden" name="_subject" value={`Contato do site Só Dança Level Up (${langName})`} />
+          <input type="hidden" name="_token" value={webhookToken} />
+          <input type="hidden" name="_to" value={emailDestino} />
+
           <div class="form-group">
             <input
               type="text"
@@ -134,6 +168,7 @@ const { configuracoes } = siteData;
           <button type="submit" class="btn btn-primary btn-full"
             >{labels.enviar}</button
           >
+          <div id="contact-feedback" class="status-msg"></div>
         </form>
       </div>
     </div>
@@ -328,4 +363,113 @@ const { configuracoes } = siteData;
       flex-direction: column;
     }
   }
+
+  /* Estilização das Mensagens de Feedback */
+  .status-msg {
+    margin-top: 15px;
+    padding: 12px 16px;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    display: none;
+    text-align: center;
+    transition: var(--transition-smooth);
+  }
+
+  .status-msg.loading {
+    display: block;
+    background-color: var(--color-bg-light);
+    color: var(--color-primary-dark);
+    border: 1px solid var(--color-border);
+  }
+
+  .status-msg.success {
+    display: block;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+  }
+
+  .status-msg.error {
+    display: block;
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+  }
 </style>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const handleFormSubmit = (formId, feedbackId, successMsg, errorMsg) => {
+      const form = document.getElementById(formId);
+      const feedback = document.getElementById(feedbackId);
+      if (!form || !feedback) return;
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        feedback.textContent = 'Enviando...';
+        feedback.className = 'status-msg loading';
+        feedback.style.display = 'block';
+
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData.entries());
+        const targetUrl = form.getAttribute('action');
+
+        fetch(targetUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(data)
+        })
+        .then(response => {
+          if (response.ok) {
+            feedback.textContent = successMsg;
+            feedback.className = 'status-msg success';
+            form.reset();
+          } else {
+            feedback.textContent = errorMsg;
+            feedback.className = 'status-msg error';
+          }
+        })
+        .catch(() => {
+          feedback.textContent = errorMsg;
+          feedback.className = 'status-msg error';
+        });
+      });
+    };
+
+    // Mensagens de acordo com o idioma corrente (lido da tag html)
+    const lang = document.querySelector('html').getAttribute('lang');
+    let successContact = 'Enviado com sucesso!';
+    let errorContact = 'Erro ao enviar. Tente novamente mais tarde.';
+    let successNewsletter = 'Inscrição realizada com sucesso!';
+    let errorNewsletter = 'Erro ao se inscrever. Tente novamente.';
+
+    if (lang === 'en') {
+      successContact = 'Sent successfully!';
+      errorContact = 'Error sending message. Please try again later.';
+      successNewsletter = 'Subscription completed successfully!';
+      errorNewsletter = 'Error subscribing. Please try again.';
+    } else if (lang === 'es') {
+      successContact = '¡Enviado con éxito!';
+      errorContact = 'Error al enviar. Por favor, inténtelo de nuevo más tarde.';
+      successNewsletter = '¡Suscripción completada con éxito!';
+      errorNewsletter = 'Error al suscribirse. Por favor, inténtelo de nuevo.';
+    } else if (lang === 'fr') {
+      successContact = 'Envoyé avec succès !';
+      errorContact = 'Erreur lors de l\'envoi. Veuillez réessayer plus tard.';
+      successNewsletter = 'Inscription réussie !';
+      errorNewsletter = 'Erreur lors de l\'inscription. Veuillez réessayer.';
+    } else if (lang === 'it') {
+      successContact = 'Inviato con successo!';
+      errorContact = 'Errore durante l\'invio. Riprova più tardi.';
+      successNewsletter = 'Iscrizione completata con successo!';
+      errorNewsletter = 'Errore durante l\'iscrizione. Riprova.';
+    }
+
+    handleFormSubmit('newsletter-form', 'newsletter-feedback', successNewsletter, errorNewsletter);
+    handleFormSubmit('contact-form', 'contact-feedback', successContact, errorContact);
+  });
+</script>
